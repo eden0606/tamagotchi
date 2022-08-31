@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import TopNav from './components/navigation/TopNav';
+import BottomNav from './components/navigation/BottomNav';
+import ButtonNav from './components/navigation/ButtonNav';
+import 'bulma/css/bulma.min.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        tamagotchi
       </header>
+      <main class="tama-content-container">
+      <TopNav/>
+      <div className="tama-content">
+        main tama screen stuff here
+      </div>
+      <BottomNav/>
+      </main>
+      
+        <ButtonNav/>
     </div>
   );
 }

@@ -1,4 +1,37 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+body, html {
+  font-family: 'Silkscreen', cursive;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+}
+
+.header {
+  text-align: center;
+  font-size: 5rem;
+  color: lavender;
+}
+
+.tama-content-container {
+  border: lavender .25rem solid;
+  border-radius: 2rem;
+  height: 75vh;
+  margin: 0 6rem;
+}
+
+.tama-content {
+  height: 57vh;
+  padding: 2rem;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +68,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

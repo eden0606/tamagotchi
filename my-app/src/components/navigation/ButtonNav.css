@@ -1,0 +1,10 @@
+.button-nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.circle-button {
+    padding: 2rem 3rem;
+    font-size: 2rem;
+    color: rgb(197, 197, 226);
+}

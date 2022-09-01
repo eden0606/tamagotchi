@@ -1,7 +1,7 @@
 import './App.css';
-import TopNav from './components/navigation/TopNav';
-import BottomNav from './components/navigation/BottomNav';
-import ButtonNav from './components/navigation/ButtonNav';
+import TopNav from './components/navigation/TopNav/TopNav';
+import BottomNav from './components/navigation/BottomNav/BottomNav';
+import ButtonNav from './components/navigation/ButtonNav/ButtonNav';
 import 'bulma/css/bulma.min.css';
 
 function App() {

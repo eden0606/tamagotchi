@@ -13,6 +13,10 @@ footer {
   width: 100vw;
 }
 
+h1 {
+  text-align: center;
+}
+
 .header {
   text-align: center;
   font-size: 5rem;
@@ -20,15 +24,19 @@ footer {
 }
 
 .tama-content-container {
-  border: lavender .25rem solid;
+  border: lavender .4rem solid;
   border-radius: 2rem;
   height: 75vh;
-  margin: 0 6rem;
+  margin: 0 12rem;
 }
 
 .tama-content {
   height: 57vh;
   padding: 2rem;
+}
+
+.auth-popup {
+  display: none;
 }
 
 /* .App {

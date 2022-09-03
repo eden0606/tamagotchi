@@ -3,23 +3,16 @@ import TopNav from './components/navigation/TopNav';
 import BottomNav from './components/navigation/BottomNav';
 import ButtonNav from './components/navigation/ButtonNav';
 import 'bulma/css/bulma.min.css';
-import { initializeApp } from "firebase/app";
-import { getDatabase, set, ref } from "firebase/database";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyCz1p1ZnITOG7oI16Rm7L27n-UQ1VgZKcg",
-  authDomain: "tamagotchi-db.firebaseapp.com",
-  databaseURL: "https://tamagotchi-db-default-rtdb.firebaseio.com",
-  projectId: "tamagotchi-db",
-  storageBucket: "tamagotchi-db.appspot.com",
-  messagingSenderId: "621212893654",
-  appId: "1:621212893654:web:7bf7945478230f41efa477",
-  measurementId: "G-XH3DH9EZL1"
-};
-const app = initializeApp(firebaseConfig);
+import getFirebaseClient from './firebase/firebaseClient';
+import { getDatabase, set, ref, onValue } from "firebase/database";
+// import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
+// import verifyToken from "../components/general/auth/token/verifyToken";
+// import UserContext from "../components/general/context/UserContext";
+// 
 
 
 
+const app = getFirebaseClient();
 const database = getDatabase(app);
 
 function App() {
@@ -37,6 +30,16 @@ function App() {
     set(ref(database, 'users/' + userId), {
       username: name,
       email: email
+    });
+  }
+
+  const userRef = ref(database, 'users/' + 1);
+
+  function readUserData(userRef){
+    onValue(userRef, (snapshot) => {
+      const data = snapshot.val();
+      console.log(data);
+      
     });
   }
   
@@ -61,8 +64,10 @@ function App() {
                         <input class="input" type="text" placeholder="password"></input>
                         <button class="button is-danger" onClick={authenticateLogin} >log in</button>
 
-                        <button class="button is-danger" onClick={writeUserData('1','liam','random@email')} >Write data</button>
-                        sign up
+                        <button class="button is-danger" onClick={() => writeUserData('1','liam','random@email')} >Write data</button>
+                        <button class="button is-danger" onClick={() => readUserData(userRef)} >Read data</button>
+                        
+
                     </div>
                 </div>
             </div>

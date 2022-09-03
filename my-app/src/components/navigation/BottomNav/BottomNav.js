@@ -6,11 +6,11 @@ function BottomNav() {
 
     return (
         <div className="bottom-nav-container">
-            <FontAwesomeIcon icon={faEnvelope} />
-            <FontAwesomeIcon icon={faToolbox} />
-            <FontAwesomeIcon icon={faBookOpen} />
-            <FontAwesomeIcon icon={faBriefcaseMedical} />
-            <FontAwesomeIcon icon={faMasksTheater} />
+            <FontAwesomeIcon id="mail-icon" icon={faEnvelope} />
+            <FontAwesomeIcon id="chest-icon" icon={faToolbox} />
+            <FontAwesomeIcon id="book-icon" icon={faBookOpen} />
+            <FontAwesomeIcon id="medicine-icon" icon={faBriefcaseMedical} />
+            <FontAwesomeIcon id="attention-icon" icon={faMasksTheater} />
         </div>
     );
 }

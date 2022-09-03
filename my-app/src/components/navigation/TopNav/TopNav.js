@@ -12,11 +12,11 @@ function TopNav() {
 
     return (
         <div className="top-nav-container">
-            <FontAwesomeIcon icon={faHouse} />
-            <FontAwesomeIcon icon={faUtensils} />
-            <FontAwesomeIcon icon={faToilet} />
-            <FontAwesomeIcon icon={faDoorOpen} />
-            <FontAwesomeIcon icon={faArrowRightFromBracket} onClick={authenticate} />
+            <FontAwesomeIcon id="house-icon" icon={faHouse} />
+            <FontAwesomeIcon id="food-icon" icon={faUtensils} />
+            <FontAwesomeIcon id="toilet-icon" icon={faToilet} />
+            <FontAwesomeIcon id="door-icon" icon={faDoorOpen} />
+            <FontAwesomeIcon id="auth-icon" icon={faArrowRightFromBracket} onClick={authenticate} />
         </div>
     );
 }

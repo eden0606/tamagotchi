@@ -1,7 +1,7 @@
 import './App.css';
-import TopNav from './components/navigation/TopNav';
-import BottomNav from './components/navigation/BottomNav';
-import ButtonNav from './components/navigation/ButtonNav';
+import TopNav from './components/navigation/TopNav/TopNav';
+import BottomNav from './components/navigation/BottomNav/BottomNav';
+import ButtonNav from './components/navigation/ButtonNav/ButtonNav';
 import 'bulma/css/bulma.min.css';
 
 function App() {
@@ -9,6 +9,8 @@ function App() {
   function closePopup() {
     document.getElementById('auth-popup').style.display="none";
   }
+
+  console.log(process.env.REACT_APP_ENV_KEY);
 
   return (
     <div className="App">
@@ -22,13 +24,13 @@ function App() {
           <div className="card">
                 <div className="card-content">
                     <div className="content">
-                    <button id="exit-button" class="delete" aria-label="delete" onClick={closePopup}></button>
+                    <button id="exit-button" className="delete" aria-label="delete" onClick={closePopup}></button>
                         <h1>log in</h1>
                         <label>username</label>
-                        <input class="input" type="text" placeholder="username"></input>
+                        <input className="input" type="text" placeholder="username"></input>
                         <label>password</label>
-                        <input class="input" type="text" placeholder="password"></input>
-                        <button class="button is-danger">log in</button>
+                        <input className="input" type="text" placeholder="password"></input>
+                        <button className="button is-danger">log in</button>
                         sign up
                     </div>
                 </div>
